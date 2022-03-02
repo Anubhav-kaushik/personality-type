@@ -1,0 +1,115 @@
+/* Import all fonts */
+@font-face {
+    font-family: 'Arial';
+    src: url(fonts/Arial.ttf);
+}
+
+@font-face {
+    font-family: 'Cabin Bold';
+    src: url(fonts/Cabin-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Cabin Regular';
+    src: url(fonts/Cabin-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    src: url(fonts/DancingScript.ttf);
+}
+
+@font-face {
+    font-family: 'Verdana';
+    src: url(fonts/Verdana.ttf);
+}
+
+@font-face {
+    font-family: 'Verdana Bold';
+    src: url(fonts/Verdana\ Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Verdana Italic';
+    src: url(fonts/Verdana\ Italic.ttf);
+}
+
+@font-face {
+    font-family: 'Verdana Bold Italic';
+    src: url(fonts/Verdana\ Bold\ Italic.ttf);
+}
+
+
+/* Typography */
+[data-font-family="Arial"] {
+    font-family: 'Arial';
+}
+
+[data-font-family="Cabin Bold"] {
+    font-family: 'Cabin Bold';
+}
+
+[data-font-family="Cabin Regular"] {
+    font-family: 'Cabin Regular';
+}
+
+[data-font-family="Dancing Script"] {
+    font-family: 'Dancing Script';
+    font-weight: bold;
+}
+
+[data-font-family="Verdana"] {
+    font-family: 'Verdana';
+}
+
+[data-font-family="Verdana Bold"] {
+    font-family: 'Verdana Bold';
+}
+
+[data-font-family="Verdana Italic"] {
+    font-family: 'Verdana Italic';
+}
+
+[data-font-family="Verdana Bold Italic"] {
+    font-family: 'Verdana Bold Italic';
+}
+
+[data-font-weight="bold"] {
+    font-weight: bold;
+}
+
+[data-font-weight="regular"] {
+    font-weight: normal;
+}
+
+[data-font-size="small"] {
+    font-size: 0.6em;
+}
+
+[data-font-size="normal"] {
+    font-size: 1em;
+}
+
+[data-font-size="large1"] {
+    font-size: 1.15em;
+}
+
+[data-font-size="large2"] {
+    font-size: 1.625em;
+}
+
+[data-font-size="large3"] {
+    font-size: 2.15em;
+}
+
+[data-font-size="larger1"] {
+    font-size: 3.66em;
+}
+
+[data-font-size="larger2"] {
+    font-size: 4.175em;
+}
+
+[data-text-color="red"] {
+    color: var(--site-red);
+}

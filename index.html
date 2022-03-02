@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's Your Personality Type?</title>
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js"></script>
+    <script src="js/creation.js"></script>
+    <script src="js/slider.js"></script>
+    <style>
+        [data-is-visible="false"] {
+            display: none !important;
+        }
+        [data-fade="in"] {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="personality-type--main-container">
+        <div class="personality-type--header">
+            <img src="interactives/interactive-names/logo.png" alt="Psychic Source">
+        </div>
+        <div class="personality-type--content">
+            <section class="personality-type--input-section" data-is-visible="true">
+                <div class="personality-type--text-content">
+                    <h1 data-font-family="Dancing Script" data-font-size="larger1" data-fade>Are You An Ambivert?</h1>
+                    <p data-font-family="Cabin Regular" data-font-size="normal" data-fade>
+                        You're probably familiar with the terms "introvert" and "extrovert," but what about "ambivert"?
+                        An ambivert is someone who falls somewhere on the middle of the spectrum. They don't have all
+                        the outgoing people-oriented qualities of an extrovert, but they're not always a quiet and
+                        solitary introvert, either. The difference between an extrovert and introvert is quite extreme,
+                        so it's no surprise that quite a few people find themselves somewhere in the middle. Take our
+                        quiz to see where you fall on the introvert-ambivert-extrovert spectrum.
+                    </p>
+                </div>
+                <div class="personality-type--input-content">
+                    <div class="personality-type--input-main-container" data-fade="">
+                        <div class="slider-container">
+                            <div class="slide-container">
+                                <div class="slide">
+                                    <h2 data-font-family="Cabin Bold" data-font-size="large2" >What role do you typically
+                                        play when you're hanging out with a group of people?</h2>
+                                    <!-- Options -->
+                                    <div class="options" data-font-family="Cabin Regular" >
+                                        <div class="option">
+                                            <input type="radio" name="group-role" id="group-role-1" value="1">
+                                            <label for="group-role-1">
+                                                <div class="option-content">
+                                                    <p data-font-size="normal">I'm the leader of the group.</p>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" name="group-role" id="group-role-2" value="2">
+                                            <label for="group-role-2">
+                                                <div class="option-content">
+                                                    <p data-font-size="normal">I'm the mediator.</p>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" name="group-role" id="group-role-3" value="3">
+                                            <label for="group-role-3">
+                                                <div class="option-content">
+                                                    <p data-font-size="normal">I'm the facilitator.</p>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section class="personality-type--output-section" data-is-visible="false">
+                <div class="personality-type--result-heading">
+                    <h1 data-font-family="Dancing Script" data-font-size="larger2" data-fade="in">
+                        Result
+                    </h1>
+                </div>
+
+                <div class="personality-type--result">
+                    <div class="personality-type--result-container">
+                        <div class="result-image" data-fade="in">
+                            <img src="interactives/interactive-names/extrovert.svg" alt="Result">
+                        </div>
+                        <div class="result-text">
+                            <h2 data-font-family="Cabin Bold" data-font-size="large3" data-text-color="red" data-fade="in">You're an Extrovert</h2>
+                            <p data-font-family="Cabin Regular" data-font-size="normal" data-fade="in">
+                                You're heavy on the extrovert end of the spectrum. One study found that about 12% of people
+                                are very extroverted like you.
+                            </p>
+    
+                            <br>
+    
+                            <p data-font-family="Cabin Regular" data-font-size="normal" data-fade="in">
+                                You like working in teams, hanging out in big groups, and meeting new people. You process
+                                problems best by talking them out with others, but you often make snap decisions before
+                                thoroughly considering the issue at all. You're bold and outgoing, and social gatherings
+                                always leave you feeling energized. If you spend too much time alone, you tend to sink into
+                                a depression.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="personality-type--start-again-btn-container" data-fade="in">
+                    <p data-font-family="Cabin Bold" data-font-size="normal" data-text-color="red" onclick="replay()">
+                        <span>&lt;&lt;</span><span> Start Again</span>
+                    </p>
+                </div>
+
+                <div class="personality-type--learn-more-container" data-fade="in">
+                    <p data-font-family="Cabin Regular" data-font-size="large1" data-fade="in">
+                        Extroverts spend more time thinking about others than themselves, so they can benefit greatly
+                        from working with a psychic for a little introspection.
+                    </p>
+                    <button data-font-family="Cabin Bold" data-font-size="large1" data-fade="in">
+                        Learn More
+                    </button>
+                </div>
+
+                <div class="personality-type--resources-container" data-fade="in">
+                    <h3 data-font-family="Cabin Bold" data-font-size="normal" data-text-color="red">
+                        Resources
+                    </h3>
+                    <div class="resources-links">
+                        <a href="https://positivepsychology.com/introversion-extroversion-spectrum/#:~:text=The%20first%20official%20random%20sample,the%20United%20States%20general%20population."
+                            data-font-family="Cabin Regular" data-font-size="small">
+                            https://positivepsychology.com/introversion-extroversion-spectrum/#:~:text=The%20first%20official%20random%20sample,the%20United%20States%20general%20population.
+                        </a>
+                        <a href="https://www.medicinenet.com/what_is_an_ambivert_person/article.htm"
+                            data-font-family="Cabin Regular" data-font-size="small">
+                            https://www.medicinenet.com/what_is_an_ambivert_person/article.htm
+                        </a>
+                        <a href="https://www.jibc.ca/sites/default/files/community_social_justice/pdf/cl/Introverts_and_Extroverts_(Psychology_Today).pdf"
+                            data-font-family="Cabin Regular" data-font-size="small">
+                            https://www.jibc.ca/sites/default/files/community_social_justice/pdf/cl/Introverts_and_Extroverts_(Psychology_Today).pdf
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/action.js"></script>
+</body>
+
+</html>

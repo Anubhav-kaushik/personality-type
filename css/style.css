@@ -1,0 +1,433 @@
+:root {
+    --heading-color: #4c1c1c;
+    --text-color: #000;
+    --bg-color: #fbc379;
+    --site-red: #bd4646;
+    --site-light-red: #f0a5a5;
+    --header-height: 100px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+/* General css */
+
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }  
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }    
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }    
+}
+
+@keyframes fadeOutTop {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+    }    
+}
+
+@keyframes fadeOutBottom {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100%);
+    }        
+}
+
+@keyframes fadeOutLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes fadeOutRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }   
+}
+
+.personality-type--main-container {
+    background-color: var(--bg-color);
+    text-align: center;
+    min-height: 100vh;
+    width: 100%;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.personality-type--main-container, 
+.personality-type--main-container * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.personality-type--main-container a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--text-color);
+    width: max-content;
+}
+
+.personality-type--main-container a:hover {
+    text-decoration: underline;
+}
+
+.personality-type--main-container button {
+    background-color: var(--site-red);
+    border: 2px solid var(--site-red);
+    padding: 0.4em 1.5em;
+    border-radius: 1.25em;
+    cursor: pointer;
+    color: white;
+}
+
+/* Header */
+
+.personality-type--header {
+    max-height: var(--header-height);
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personality-type--header img {
+    height: 80%;
+}
+
+/* sections */
+
+.personality-type--content > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+    width: 90%;
+    min-height: calc(100vh - var(--header-height));
+    max-width: 72ch;
+    margin: auto;
+}
+
+.personality-type--content > section > * {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* section 1 */
+.personality-type--text-content,
+.personality-type--input-content {
+    flex-basis: 100%;
+}
+
+.personality-type--text-content {
+    gap: 3em;
+    padding-top: 1em;
+}
+
+
+/* Slider and Questions input */
+
+.personality-type--input-content {
+    width: 100%;
+}
+
+.personality-type--input-main-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 1em;
+}
+
+.personality-type--input-main-container .slider-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.personality-type--input-main-container .slide-container {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.personality-type--input-main-container .slide {
+    min-height: 15rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: min(100%, 90vw);
+    padding: 0 1em;
+    gap: 1em;
+}
+
+.personality-type--input-main-container .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 0 3em 0;
+}
+
+.personality-type--input-main-container .options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 1em;
+}
+
+.personality-type--input-main-container .options .option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1.2em;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out,
+                color 0.5s ease-in-out;
+}
+
+.personality-type--input-main-container .options .option input[type="radio"] {
+    display: none;
+}
+
+.personality-type--input-main-container .options input[type="radio"]:checked + label {
+    background-color: var(--site-red);
+    color: white;
+}
+
+.personality-type--input-main-container .options .option label {
+    cursor: pointer;
+    width: 100%;
+    padding: 0.5em;
+}
+
+.personality-type--input-main-container .pagination-container .pagination-circle {
+    fill: transparent;
+    stroke: var(--site-red);
+}
+
+.personality-type--input-main-container .pagination-container .pagination-circle[data-visited="true"] {
+    fill: var(--site-light-red);
+    cursor: pointer;
+}
+
+.personality-type--input-main-container .pagination-container .pagination-circle[data-visited="false"] {
+    cursor: not-allowed;
+}
+
+.personality-type--input-main-container .pagination-container .pagination-circle[data-active="true"] {
+    fill: var(--site-red);
+}
+
+/* section 2 */
+
+section.personality-type--output-section {
+    max-width: 105ch;
+}
+
+.personality-type--output-section .personality-type--result .personality-type--result-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    align-self: auto;
+    flex-wrap: wrap;
+    gap: 3vw;
+    padding-block: 0.5em;
+}
+
+.personality-type--output-section .personality-type--result::before,
+.personality-type--output-section .personality-type--result::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 1.5em;
+}
+
+.personality-type--output-section .personality-type--result::before {
+    background-image: url(../interactives/interactive-names/result-border-up.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+
+.personality-type--output-section .personality-type--result::after {
+    background-image: url(../interactives/interactive-names/result-border-down.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.personality-type--output-section .personality-type--result .result-text {
+    text-align: left;
+    padding: 0.5em 1em;
+    max-width: 72ch;
+    min-width: 30ch;
+    flex-grow: 1;
+}
+
+.personality-type--output-section .personality-type--result .result-image {
+    min-width: 200px;
+    width: 30vh;
+    max-width: 450px;
+    flex-grow: 1;
+}
+
+/* start again button */
+
+.personality-type--output-section .personality-type--start-again-btn-container p {
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+
+/* learn more */
+
+.personality-type--learn-more-container {
+    background-color: white;
+    border: 2px solid var(--site-red);
+    border-radius: 1.25em;
+    max-width: 80ch;
+    width: 80%;
+    min-width: 35ch;
+    padding: 0.5em;
+}
+
+.personality-type--learn-more-container > * {
+    margin-block: 0.5em;
+}
+
+/* resources */
+
+.personality-type--resources-container {
+    margin-bottom: 1.5em;
+    width: 100vw;
+}
+
+.personality-type--resources-container h3 {
+    display: flex;
+    gap: 0.3em;
+    padding-block: 1em;
+}
+.personality-type--resources-container h3::before,
+.personality-type--resources-container h3::after {
+    content: " ";
+    display: inline-block;
+    max-width: 8em;
+    width: 10vw;
+    min-width: 4em;
+}
+
+.personality-type--resources-container h3::before {
+    background-image: url(../interactives/interactive-names/resource-left.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.personality-type--resources-container h3::after {
+    background-image: url(../interactives/interactive-names/resource-right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.personality-type--resources-container a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-block: 0.15em;
+}
+
