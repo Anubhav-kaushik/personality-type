@@ -172,7 +172,6 @@ function getActiveSlideIndex(slides) {
 async function move2NthSlide(slideIndex, slideSelector) {
     const slides = document.querySelectorAll(`${slideSelector}`);
     const activeSlideIndex = getActiveSlideIndex(slides);
-    const activeSlide = slides[activeSlideIndex - 1];
 
     const gap = slideIndex - activeSlideIndex;
 
@@ -185,7 +184,7 @@ async function move2NthSlide(slideIndex, slideSelector) {
             nextSlide.dataset.active = true;
             syncPaginationNSlides(slideSelector, paginationCirclesClass);
             moveSlide('left');
-            await sleep(0.3);
+            await sleep(0.5);
         }
     } else if (gap === 0) {
         return;
@@ -198,7 +197,7 @@ async function move2NthSlide(slideIndex, slideSelector) {
             nextSlide.dataset.active = true;
             syncPaginationNSlides(slideSelector, paginationCirclesClass);
             moveSlide('right');
-            await sleep(0.3);
+            await sleep(0.5);
         }
     }
 
