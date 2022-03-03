@@ -347,9 +347,9 @@ async function showResult(score) {
     learnMoreText.innerText = resultCategory.learnMore.text;
 
     const learnMoreLink = outputSection.querySelector('.personality-type--learn-more-container button');
-    learnMoreLink.onClick = () => {
+    learnMoreLink.addEventListener('click', () => {
         window.open(resultCategory.learnMore.link, '_blank');
-    }
+    });
 
     console.log('Your Score: ' + score);
 
