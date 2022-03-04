@@ -14,7 +14,7 @@ const result = {
             link: "https://www.psychologytoday.com/us/blog/the-psychology-of-extroverts/201105/why-extroverts-are-so-special"
         },
         image: {
-            src: "interactives/interactive-names/extrovert.svg",
+            src: "infographics/interactive-names/extrovert.svg",
             alt: "Extrovert"
         },
         score: {
@@ -37,7 +37,7 @@ const result = {
             link: "https://www.psychologytoday.com/us/blog/the-psychology-of-extroverts/201105/why-extroverts-are-so-special"
         },
         image: {
-            src: "interactives/interactive-names/introvert.svg",
+            src: "infographics/interactive-names/introvert.svg",
             alt: "Introvert"
         },
         score: {
@@ -60,7 +60,7 @@ const result = {
             link: "https://www.psychologytoday.com/us/blog/the-psychology-of-extroverts/201105/why-extroverts-are-so-special"
         },
         image: {
-            src: "interactives/interactive-names/ambivert.svg",
+            src: "infographics/interactive-names/ambivert.svg",
             alt: "Ambivert"
         },
         score: {

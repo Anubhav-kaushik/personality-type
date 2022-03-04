@@ -20,9 +20,16 @@ function showNcards(n) {
 
     const mainContainerWidth = mainContainer.offsetWidth;
 
+    console.log(mainContainerWidth);
+
     if (n * slides[0].offsetWidth > mainContainerWidth) {
         while (n * slides[0].offsetWidth > mainContainerWidth) {
             n -= 1;
+
+            if (n < 1) {
+                n = 1;
+                break;
+            }
         }
     }
 
@@ -262,6 +269,19 @@ async function runGame(slideSelector, paginationSelector) {
     activatePaginationFunc(slideSelector, paginationSelector);
 }
 
+async function changeBackgroundImage(containerSelector, imageUrl, time, delay=0) {
+    const container = document.querySelector(containerSelector);
+    container.style.animation = `changeScreen ${time}s ease-in-out ${delay}s forwards`;
+
+    setTimeout(() => {
+        container.style.backgroundImage = `url("${imageUrl}")`;
+    }, time*1000/2);
+
+    await sleep(time + delay);
+
+    container.style.animation = 'none';
+}
+
 // fade out animation
 function fadeOut(element, direction, duration, delay = 0) {
     if (direction === 'left') {
@@ -342,7 +362,6 @@ async function showResult(score) {
         descriptions[i].innerText = resultCategory.para[i + 1];
     }
 
-
     const learnMoreText = outputSection.querySelector('.personality-type--learn-more-container p');
     learnMoreText.innerText = resultCategory.learnMore.text;
 
@@ -351,7 +370,7 @@ async function showResult(score) {
         window.open(resultCategory.learnMore.link, '_blank');
     });
 
-    console.log('Your Score: ' + score);
+    changeBackgroundImage('.personality-type--main-container', "infographics/interactive-names/bg-output.jpg", 1.5, 0.5);
 
     await fadeAll('.personality-type--input-section', 'out', 'right', 1000);
 
@@ -370,13 +389,13 @@ async function replay() {
     const inputSection = document.querySelector('.personality-type--input-section');
     const outputSection = document.querySelector('.personality-type--output-section');
 
-    console.log('replay');
-
     appendSlider(questions, ".personality-type--input-main-container")
 
     addPagination('.personality-type--input-main-container', Object.keys(questions).length);
 
     runGame(slideClass, paginationCirclesClass);
+
+    changeBackgroundImage('.personality-type--main-container', "infographics/interactive-names/bg-input.jpg", 1.5, 0.5);
 
     fadeOut(outputSection, 'left', 1500);
     await fadeAll('.personality-type--output-section', 'out', 'left', 800);

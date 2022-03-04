@@ -11,7 +11,6 @@ const sliderMainContainer = document.querySelector(".personality-type--input-mai
 const sliderResizeListener = new ResizeObserver(entries => {
     entries.forEach(entry => {
         showNcards(1);
-        console.log('resized');
     });
 });
 

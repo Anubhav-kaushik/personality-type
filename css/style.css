@@ -1,10 +1,16 @@
 :root {
     --heading-color: #4c1c1c;
     --text-color: #000;
-    --bg-color: #fbc379;
+    --bg-color: #fbd9a9;
     --site-red: #bd4646;
     --site-light-red: #bd464655;
     --header-height: 100px;
+    --result-top-design: url(../infographics/interactive-names/result-border-up.svg);
+    --result-bottom-design: url(../infographics/interactive-names/result-border-down.svg);
+    --resources-left-design: url(../infographics/interactive-names/resource-left.svg);
+    --resources-right-design: url(../infographics/interactive-names/resource-right.svg);
+    --background-img-input: url(../infographics/interactive-names/bg-input.jpg);
+    --background-img-output: url(../infographics/interactive-names/bg-output.jpg);
 }
 
 body {
@@ -138,12 +144,31 @@ body {
     width: 100%;
     font-size: 20px;
     overflow: hidden;
+    background-image: var(--background-img-input);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 0;
 }
 
 @media screen and (max-width: 500px) {
     .personality-type--main-container {
         font-size: 18px;
     }
+}
+
+@keyframes changeScreen {
+    0% {
+        background-position-y: 0;
+    }
+
+    50% {
+        background-position-y: 300vh;
+    }
+
+    100% {
+        background-position-y: 0;
+    }    
 }
 
 .personality-type--main-container,
@@ -365,12 +390,12 @@ section.personality-type--output-section {
 }
 
 .personality-type--output-section .personality-type--result::before {
-    background-image: url(../interactives/interactive-names/result-border-up.svg);
+    background-image: var(--result-top-design);
     background-position: bottom;
 }
 
 .personality-type--output-section .personality-type--result::after {
-    background-image: url(../interactives/interactive-names/result-border-down.svg);
+    background-image: var(--result-bottom-design);
     background-position: top;
 }
 
@@ -487,20 +512,17 @@ section.personality-type--output-section {
     max-width: 8em;
     width: 10vw;
     min-width: 4em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .personality-type--resources-container h3::before {
-    background-image: url(../interactives/interactive-names/resource-left.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background-image: var(--resources-left-design);
 }
 
 .personality-type--resources-container h3::after {
-    background-image: url(../interactives/interactive-names/resource-right.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background-image: var(--resources-right-design);
 }
 
 .personality-type--resources-container a {
