@@ -1,42 +1,42 @@
 /* Import all fonts */
 @font-face {
     font-family: 'Arial';
-    src: url(fonts/Arial.ttf);
+    src: url(../infographics/fonts/Arial.ttf);
 }
 
 @font-face {
     font-family: 'Cabin Bold';
-    src: url(fonts/Cabin-Bold.ttf);
+    src: url(../infographics/fonts/Cabin-Bold.ttf);
 }
 
 @font-face {
     font-family: 'Cabin Regular';
-    src: url(fonts/Cabin-Regular.ttf);
+    src: url(../infographics/fonts/Cabin-Regular.ttf);
 }
 
 @font-face {
     font-family: 'Dancing Script';
-    src: url(fonts/DancingScript.ttf);
+    src: url(../infographics/fonts/DancingScript.ttf);
 }
 
 @font-face {
     font-family: 'Verdana';
-    src: url(fonts/Verdana.ttf);
+    src: url(../infographics/fonts/Verdana.ttf);
 }
 
 @font-face {
     font-family: 'Verdana Bold';
-    src: url(fonts/Verdana\ Bold.ttf);
+    src: url(../infographics/fonts/Verdana\ Bold.ttf);
 }
 
 @font-face {
     font-family: 'Verdana Italic';
-    src: url(fonts/Verdana\ Italic.ttf);
+    src: url(../infographics/fonts/Verdana\ Italic.ttf);
 }
 
 @font-face {
     font-family: 'Verdana Bold Italic';
-    src: url(fonts/Verdana\ Bold\ Italic.ttf);
+    src: url(../infographics/fonts/Verdana\ Bold\ Italic.ttf);
 }
 
 
