@@ -11,7 +11,7 @@ const result = {
         },
         learnMore: {
             text: "Extroverts spend more time thinking about others than themselves, so they can benefit greatly from working with a psychic for a little introspection.",
-            link: "https://www.psychologytoday.com/us/blog/the-psychology-of-extroverts/201105/why-extroverts-are-so-special"
+            link: "https://www.pathforwardpsychics.com/psychic-readings/astrology"
         },
         image: {
             src: "infographics/interactive-names/extrovert.svg",
@@ -34,7 +34,7 @@ const result = {
         },
         learnMore: {
             text: "As an introvert, you'll benefit greatly from speaking with a psychic. An intuitive advisor will understand where you're coming from and can help you chart your course.",
-            link: "https://www.psychologytoday.com/us/blog/the-psychology-of-extroverts/201105/why-extroverts-are-so-special"
+            link: "https://www.pathforwardpsychics.com/psychic-readings/astrology"
         },
         image: {
             src: "infographics/interactive-names/introvert.svg",
@@ -57,7 +57,7 @@ const result = {
         },
         learnMore: {
             text: "As an ambivert you have a balanced focus between yourself and others. Speaking with a psychic may help you see where your attentions are most needed right now so you'll know you're focusing on the right things.",
-            link: "https://www.psychologytoday.com/us/blog/the-psychology-of-extroverts/201105/why-extroverts-are-so-special"
+            link: "https://www.pathforwardpsychics.com/psychic-readings/astrology"
         },
         image: {
             src: "infographics/interactive-names/ambivert.svg",

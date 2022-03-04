@@ -113,3 +113,7 @@
 [data-text-color="red"] {
     color: var(--site-red);
 }
+
+[data-text-color="brown"] {
+    color: var(--font-brown);
+}
