@@ -338,7 +338,7 @@ function showPointer(score, barSelector) {
     let bar = document.querySelector(barSelector);
     let pointer;
     
-    let percentDeviation = score <= 15 ? (score - 9) * 100 / 6 : score <=25 ? (score - 15) * 100 / 10 : (score - 25) * 100 / 5;
+    let percentDeviation = score <= 15 ? (score - 9) * 100 / 7 : score <=25 ? (score - 15) * 100 / 11 : (score - 25) * 100 / 6;
 
     if (score <= 15) {
         pointer = bar.querySelector(`.bar-extrovert`);
