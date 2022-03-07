@@ -41,7 +41,7 @@ const result = {
             alt: "Introvert"
         },
         score: {
-            min: 25,
+            min: 26,
             max: 30
         }
     },
@@ -65,7 +65,7 @@ const result = {
         },
         score: {
             min: 16,
-            max: 24
+            max: 25
         }
     }
 }
