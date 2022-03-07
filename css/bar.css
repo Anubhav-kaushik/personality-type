@@ -1,0 +1,79 @@
+.personality-type--output-section .personality-type--bar {
+    width: 70%;
+    height: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 1em 0 2em;
+    gap: 0.2em;
+}
+
+.personality-type--output-section .personality-type--bar * {
+    flex: 1 1 auto;
+    position: relative;
+    color: white;
+    padding-block: 0.3em;
+    background-color: rgba(158, 158, 158, 0.644);
+}
+
+.personality-type--output-section .personality-type--bar *::before {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -1.5em;
+}
+
+.personality-type--output-section .personality-type--bar *::after {
+    position: absolute;
+    font-size: 2em;
+    font-weight: bold;
+    bottom: -1em;
+}
+
+.personality-type--output-section .personality-type--bar *[data-pointed="true"] {
+    background-color: var(--site-red);
+}
+
+.personality-type--output-section .personality-type--bar *[data-pointed="true"]::before {
+    color: var(--site-red);
+}
+
+.personality-type--output-section .personality-type--bar *[data-pointed="true"]::after {
+    content: "\2191";
+    left: var(--percent-deviation);
+    animation: moveUpDown 1s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(0.2em);
+    }
+}
+
+.personality-type--output-section .personality-type--bar .bar-extrovert {
+    flex-basis: 15%;
+}
+
+.personality-type--output-section .personality-type--bar .bar-extrovert::before {
+    content: "Extrovert";
+}
+
+.personality-type--output-section .personality-type--bar .bar-ambivert {
+    flex-basis: 77%;
+}
+
+.personality-type--output-section .personality-type--bar .bar-ambivert::before {
+    content: "Ambivert";
+}
+
+.personality-type--output-section .personality-type--bar .bar-introvert {
+    flex-basis: 8%;
+}
+
+.personality-type--output-section .personality-type--bar .bar-introvert::before {
+    content: "Introvert";
+}

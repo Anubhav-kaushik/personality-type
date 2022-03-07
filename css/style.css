@@ -12,6 +12,7 @@
     --resources-right-design: url(../infographics/interactive-names/resource-right.svg);
     --background-img-input: url(../infographics/interactive-names/bg-input.jpg);
     --background-img-output: url(../infographics/interactive-names/bg-output.jpg);
+    --percent-deviation: 0%;
 }
 
 body {

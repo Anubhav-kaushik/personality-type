@@ -334,6 +334,36 @@ async function fadeAll(elementSelector, fadeType, direction, duration, delay = 0
     return;
 }
 
+function showPointer(score, barSelector) {
+    let bar = document.querySelector(barSelector);
+    let pointer;
+    
+    let percentDeviation = score <= 15 ? (score - 9) * 100 / 6 : score <=25 ? (score - 15) * 100 / 10 : (score - 25) * 100 / 5;
+
+    if (score <= 15) {
+        pointer = bar.querySelector(`.bar-extrovert`);
+        pointer.dataset.pointed = true;
+    } else if (score <= 25) {
+        pointer = bar.querySelector(`.bar-ambivert`);
+        pointer.dataset.pointed = true;
+    } else {
+        pointer = bar.querySelector(`.bar-introvert`);
+        pointer.dataset.pointed = true;
+    }
+
+    console.log('score', score);
+    console.log('percentDeviation', percentDeviation);
+
+    document.documentElement.style.setProperty('--percent-deviation', `${percentDeviation}%`);
+}
+
+function resetPointer(barSelector) {
+    let bar = document.querySelector(barSelector);
+    let pointer = bar.querySelector(`*[data-pointed="true"]`);
+    pointer.dataset.pointed = false;
+    document.documentElement.style.setProperty('--incline-percentage', `0%`);
+}
+
 async function showResult(score) {
     const inputSection = document.querySelector('.personality-type--input-section');
     const outputSection = document.querySelector('.personality-type--output-section');
@@ -369,6 +399,8 @@ async function showResult(score) {
     learnMoreLink.addEventListener('click', () => {
         window.open(resultCategory.learnMore.link, '_blank');
     });
+
+    showPointer(score, '.personality-type--bar');
 
     changeBackgroundImage('.personality-type--main-container', "infographics/interactive-names/bg-output.jpg", 1.5, 0.5);
 
@@ -423,4 +455,6 @@ async function replay() {
 
     fadeIn(inputSection, 'left', 500);
     await fadeAll('.personality-type--input-section', 'in', 'left', 1000);
+
+    resetPointer('.personality-type--bar');
 }
